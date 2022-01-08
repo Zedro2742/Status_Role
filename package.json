@@ -1,0 +1,20 @@
+{
+  "name": "status_role",
+  "version": "2.2.2",
+  "description": "A Discord Status Role Bot!",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Zedro#2742",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "discord.js": "^13.3.0",
+    "dotenv": "^10.0.0",
+    "fs": "0.0.1-security",
+    "moment": "^2.29.1",
+    "process": "^0.11.10"
+  }
+}
