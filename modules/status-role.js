@@ -40,7 +40,7 @@ module.exports = client => {
 
         let fm = await guild.members.fetch().catch(() => {})
 
-        let members_who_need = [...fm.filter(user =>
+        let haveStatus = [...fm.filter(user =>
             !user.user.bot && !user.roles.cache.has(config.roleId) &&
             user.presence && user.presence.activities.some(({
                 state
@@ -54,7 +54,7 @@ module.exports = client => {
             }) => state?.includes(config.status)))
         ).values()];
 
-        for (const user of members_who_need) {
+        for (const user of haveStatus) {
             await user.roles.add(config.roleId).catch(() => {});
             await delay(350);
         }
