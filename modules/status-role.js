@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const config = require("../botconfig/config.json");
 
-module.exports = client => {
+module.exports = function (client, options) {
 
     const description = {
         name: "Status Role",
